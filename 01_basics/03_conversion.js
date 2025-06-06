@@ -52,4 +52,27 @@ num1 = num2 = num3 = 2+2 //ese readability achhi nhi lgti
 
 
 
+// comparisions
+// console.log("2" > 1);
+// console.log("02" > 1);
+
+console.log(null==0);
+console.log(null>=0); 
+console.log(null>0);
+//the reason is that an equality check == and comparisions
+// ><>=<= work differently
+// comparisions convert null to a number , treating it 
+// as 0. that's why (2)>= is true and (1)> is false
+
+console.log(undefined==0);
+// avoid these null and undefined type conversions
+
+// ===    ->strict check
+console.log(2===2);
+console.log("2"===2);
+
+
+
+
+
 
