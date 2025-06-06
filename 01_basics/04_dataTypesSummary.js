@@ -35,3 +35,45 @@ console.log(typeof data);
 console.log(typeof myFunction);
 console.log(typeof bigNumber);
 
+
+
+// | Variable / Value              | Data Type (Category)         | `typeof` result      |
+// | ----------------------------- | ---------------------------- | -------------------- |
+// | `const score = 100`           | **Number (Primitive)**       | `"number"`           |
+// | `const isLoggedIn = false`    | **Boolean (Primitive)**      | `"boolean"`          |
+// | `const data = null`           | **Null (Primitive)**         | `"object"` ✅ *(bug)* |
+// | `let userEmail;`              | **Undefined (Primitive)**    | `"undefined"`        |
+// | `Symbol('123')`               | **Symbol (Primitive)**       | `"symbol"`           |
+// | `BigInt value` (like `3248n`) | **BigInt (Primitive)**       | `"bigint"`           |
+// | `heros = [ ... ]`             | **Array (Non-Primitive)**    | `"object"` ✅         |
+// | `myObj = { ... }`             | **Object (Non-Primitive)**   | `"object"`           |
+// | `myFunction = function(){}`   | **Function (Non-Primitive)** | `"function"` ✅       |
+
+
+
+//********MEMORY********** */
+//Stack  and Heap
+//stack use hoti h primitive types me and non primitive me heap memory use hoti h
+
+let myYoutubeName="vickychoudhary"
+
+let anotherName=myYoutubeName
+anotherName = 'hahhaha'
+console.log(anotherName);
+console.log(myYoutubeName);
+
+//object
+let user1={
+    email:"user@gamil.com",
+    upi:"user@ybl"
+
+}
+let user2=user1
+user2.email="vicky@gmail.com"
+console.log(user1.email);
+console.log(user2.email);
+
+//stack me primitive data types jate h to jb bhi hm access krte h
+// to hme uski copy milti h jbki heap me (non primitive)
+// references milta h to heap me kuch change krte h to 
+// original me bhi changes honge
