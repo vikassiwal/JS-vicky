@@ -13,7 +13,7 @@ const myArr2 = new Array(1,2,3,4)
 // arr.pop()
 // console.log(arr);
 
-// arr.unshift(9)
+// arr.unshift(8)
 // console.log(arr);
 // arr.shift()
 // console.log(arr);
@@ -21,7 +21,7 @@ const myArr2 = new Array(1,2,3,4)
 // console.log(arr.includes(9));
 // console.log(arr.indexOf(9));
 
-// const newArr = arr.join()
+// const newArr = arr.join("-") //.join() method is used to combine all the elements of an array into a single string.
 // console.log(arr);
 // console.log(newArr);
 // console.log(typeof(newArr));
