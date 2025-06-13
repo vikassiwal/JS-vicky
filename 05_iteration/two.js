@@ -31,7 +31,7 @@ console.log(map);
 // for (const key in myObject) {
 //     console.log(myObject[key]);
     
-// }
+//}
 // for (const key in arr) {
 //     console.log(arr[key]);
     
@@ -46,9 +46,9 @@ const coding =["js","ruby","java","python"]
 //     console.log(val);
 // })
 
-function printMe(item){
-    console.log(item);
-}
+// function printMe(item){
+//     console.log(item);
+// }
 // coding.forEach(printMe)
 
 // coding.forEach((item,index,arr)=>{
