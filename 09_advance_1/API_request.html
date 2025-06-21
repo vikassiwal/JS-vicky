@@ -1,0 +1,61 @@
+<!-- API ek tareeka hai jiske through ek software ya website 
+doosre software se baat karta hai. Ye data lene ya bhejne ke kaam aata hai
+bina system ke internal code ko access kiye.
+ex in any website we do login with facebook or google
+or  Agar hum weather app me temperature dekhte hain, to wo Google ya kisi
+weather service se data API ke through mangta hai. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <button id="showCard">Show vicky's ID Card</button>
+    <div id="container"></div>
+</body>
+<script>
+     const requestUrl = 'https://api.github.com/users/vikassiwal'
+    // const xhr = new XMLHttpRequest()
+    // // Creates a new XHR object so you can make HTTP requests (like GET, POST).
+    // xhr.open('GET',requestUrl)
+    // // Think of open() like writing an envelope:
+    // //You write the address (URL)
+    // //You choose what you're sending (GET/POST)
+    // //But nothing is delivered until you call send() (drop it in the mailbox).
+    // xhr.onreadystatechange= function(){ //->continuosly chizo ko monitor krti h
+
+    //     console.log(xhr.readyState);
+    //     if(xhr.readyState===4){
+    //         const data=JSON.parse(this.responseText) //convert json string to object
+    //         console.log(data.followers);
+            
+    //     }
+        
+    // }
+    // xhr.send() //noe request is sent
+
+    // ab ek assignment krte h ki ek card bnate h jo name or follower consist krta ho
+    document.getElementById("showCard").addEventListener('click', function () {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText);
+
+            const card = document.createElement('div');
+            card.innerHTML = `
+                <img src="${data.avatar_url}" width="100" height="100" style="border-radius: 50%;"><br>
+                <h3>${data.name || data.login}</h3>
+                <p>Followers: ${data.followers}</p>`;
+
+            document.getElementById("container").appendChild(card);
+        }
+    };
+    xhr.send();
+});
+
+</script>
+</html>
