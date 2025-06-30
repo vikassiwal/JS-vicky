@@ -17,11 +17,11 @@ Object.prototype.vicky = function(){
     
 }
 Array.prototype.heyVicky = function(){
-    console.log(`vikcy says hello`);
+    console.log(`vicky says hello to reet onlyy`);
     
 }
 
-// heroPower.vicky()
+heroPower.vicky()
 myHera.vicky()
 
 myHera.heyVicky()
@@ -40,7 +40,7 @@ const teachingSupport ={
 const TASupport={
     makeAssignment:'JS assignment',
     fullTime:true,
-    __proto__: teachingSupport //->kisi o rki properties ko ese inheritance kr skte ho
+    __proto__: teachingSupport //->kisi or ki properties ko ese inheritance kr skte ho
 
 }
 

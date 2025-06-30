@@ -4,12 +4,21 @@
 // classes, new, this yeh sare protoype se hi mile h
 
 
-function multipleBY5(num){
-    return num*5
+function Dog(name) {
+    this.name = name;
 }
-multipleBY5.power=2 
-console.log(multipleBY5.power);
-console.log(multipleBY5.prototype);
+
+Dog.prototype.bark = function() {
+    console.log(this.name + " says Woof!");
+};
+
+const dog1 = new Dog("Bruno");
+const dog2 = new Dog("Max");
+
+dog1.bark(); // Bruno says Woof!
+dog2.bark(); // Max says Woof!
+//  Only one bark() function exists in memory — used by all dogs!
+
 
 function createUser(userName,score){
     this.userName=userName
@@ -32,7 +41,7 @@ chai.printMe()
 
 Here's what happens behind the scenes when the new keyword is used:
 
-A new object is created: The new keyword initiates the creation of a new JavaScript object.
+A new object is created: The new keyword initiates the creation of a new JavaScript empty object.
 
 A prototype is linked: The newly created object gets linked to the prototype property of the constructor function.
 This means that it has access to properties and methods defined on the constructor's prototype.

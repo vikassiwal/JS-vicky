@@ -6,7 +6,7 @@
 //     signedIn:true,
 
 //     getUserDetails:function(){
-//         // console.log("got user details from bb");
+//         // console.log("got user details from db");
 //         console.log(this);
         
         
@@ -17,8 +17,9 @@
 // console.log(this);
 
 const dateOne = new Date()
-// yeh "new" ek constructor function h yeh allow krta h
+// yeh"new" allow krta h
 // ki aap ek object se multiple instances bna sko
+// create a new empty object
 
 function user(username,logincount,isLoggedIn){
     this.username= username
@@ -41,10 +42,12 @@ function user(username,logincount,isLoggedIn){
 const userOne=new user("vicky",12,true)
 const userTwo= new user("chai aur code",11,false)
 console.log(userOne.constructor);
-// console.log(userTwo);
+console.log(userTwo);
 
 // jb bhi "new" keyword use kroge to 
 // 1. ek empty object create hota h jisko instance bola jata h
-// 2. ek constructor function call hota h jo argument wgera ko pack krta h or apko de deta h
+// 2. The newly created object is automatically linked to the prototype of the constructor function.
+//3. The constructor function is called, and inside it, this refers to the new object.
+//4.  If the constructor doesn’t return an object explicitly, JavaScript returns the newly created object by default.
 
 
