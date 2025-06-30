@@ -59,7 +59,7 @@ promisefour.then((user)=>{
 
 const promisefive = new Promise(function(resolve,reject){
     setTimeout(() => {
-        let error =true;
+        let error =false;
         if(!error){
             resolve({username:"JAVASCRIPT",password:"123"})
         }
@@ -83,8 +83,8 @@ consumepromiseFive()
 
 // async function getallUsers(){
 //     try {
-//         const response1 = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-//         const data =await response1.json()
+//         const response1 = await fetch('https://jsonplaceholder.typicode.com/users')
+//         const data = await response1.json()
 //         console.log(data);
 //     } catch (error) {
 //         console.log("E:" ,error);
