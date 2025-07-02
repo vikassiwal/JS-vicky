@@ -12,7 +12,7 @@ const chai ={
     isAvailable:true, 
 
     orderchai: function(){
-        console.log("code fat gya");
+        console.log("we dont want  methods in iteration");
         
     }
 }
