@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button clicked</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library = "React"
+            this.server="https://localhost:300"
+        
+
+            // requirement
+            document.querySelector('button').
+                addEventListener('click',this.handleClick.bind(this))
+        }
+        handleClick(){
+            console.log("click ho gya, bhai");
+            console.log(this.server);
+            
+        }
+    }
+    const app = new React()
+</script>
+</html>
+
+/*
+.bind(this) fixes the value of "this" inside a function.
+Without bind, 'this' can become undefined or refer to the wrong object.
+Useful in class methods, event listeners, and callbacks.*/
